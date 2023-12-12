@@ -24,7 +24,7 @@
       </div>
 
       <div class="inputBox"> 
-       <input type="submit" value="Email Password Reset Link" style>
+       <input type="submit" value="Get Link" style>
       </div> 
 
       </form>
