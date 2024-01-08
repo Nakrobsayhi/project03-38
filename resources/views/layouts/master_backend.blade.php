@@ -34,28 +34,27 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="{{ asset('backend/img/logo/logo.png')}}" alt="" /></a>
+                <a href="{{ url('/dashboard') }}"><img class="main-logo" src="" alt="" /></a>
                 <strong><img src="{{ asset('backend/img/logo/logosn.png')}}" alt="" /></strong>
             </div>
 			<div class="nalika-profile">
 				<div class="profile-dtl">
 					<a href="#"><img src="{{ asset('backend/img/notification/4.jpg')}}" alt="" /></a>
-					<h2>Nakrob <span class="min-dtn">Sayhi</span></h2>
+					<h2><span class="min-dtn">{{ Auth::user()->name }}</span></h2>
+                    <h2><span class="min-dtn">{{ Auth::user()->email }}</span></h2>
 				</div>
 			</div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li class="active">
-                            <a class="has-arrow" href="index.html">
+                            <a href="{{ url('/dashboard') }}">
 								   <i class="icon nalika-home icon-wrap"></i>
 								   <span class="mini-click-non">Dashboard</span>
 								</a>
-                            <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">User</span></a></li>
-                                <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Category</span></a></li>
-                                <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Product</span></a></li>
-                            </ul>
+                                <li><a title="Dashboard v.1" href="{{ url('admin/user/index') }}"><span class="mini-sub-pro">User</span></a></li>
+                                <li><a title="Dashboard v.1" href="{{ url('admin/category/index') }}"><span class="mini-sub-pro">Category</span></a></li>
+                                <li><a title="Dashboard v.1" href="{{ url('admin/product/index') }}"><span class="mini-sub-pro">Product</span></a></li>
                         </li>
                     </ul>
                 </nav>
