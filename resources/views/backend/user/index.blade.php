@@ -15,10 +15,10 @@
                             <th>Email</th>
                             <th>Phone</th>
                         </tr>
-                        
+
                         @foreach ($u as $user)
 
-                        <tr>    
+                        <tr>
                             <td>{{ $user->id }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>

@@ -68,7 +68,6 @@ class ProductController extends Controller
     {
         $product = Product::find($product_id);
         $product->name = $request->name;
-        $product->image = $request->file('image');
         $product->price = $request->price;
         $product->description = $request->description;
         $product->category_id = $request->category_id;
@@ -78,7 +77,6 @@ class ProductController extends Controller
                 File::delete(public_path() . '/backend/product/' . $product->image);
                 File::delete(public_path() . '/backend/product/resize/' . $product->image);
             }
-
             $filename = Str::random(10) . '.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->move(public_path() . '/backend/product/', $filename);
             Image::make(public_path() . '/backend/product/' . $filename)->resize(500, 450)->save(public_path() . '/backend/product/resize/' . $filename);

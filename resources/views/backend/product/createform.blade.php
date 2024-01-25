@@ -82,7 +82,7 @@
                                             <div class="text-center custom-pro-edt-ds">
                                                 <input type="submit" value="Save"
                                                     class="btn btn-ctl-bt waves-effect waves-light m-r-10">
-                                                <a href="{{ url('admin/category/index') }}"><button type="button"
+                                                <a href="{{ url('admin/product/index') }}"><button type="button"
                                                         class="btn btn-ctl-bt waves-effect waves-light">Discard
                                                     </button></a>
                             </form>
