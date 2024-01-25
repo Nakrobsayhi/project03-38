@@ -4,6 +4,9 @@ use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\ProfileController;
+use App\Models\User;
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +26,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
+    $u = User::all();
+    $c = Category::all();
+    $p = Product::all();
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 

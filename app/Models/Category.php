@@ -9,4 +9,8 @@ class Category extends Model
 {
     use HasFactory;
     protected $primaryKey = 'category_id';
+
+    public function pro(){
+    return $this->HasMany(Product::class,'category_id');
+    }
 }

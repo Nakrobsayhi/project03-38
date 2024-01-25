@@ -13,13 +13,14 @@
                     </div>
                     <table>
                         <tr>
-                            <th>product_id</th>
-                            <th>name</th>
-                            <th>image</th>
-                            <th>price</th>
-                            <th>description</th>
-                            <th>created_at</th>
-                            <th>updated_at</th>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Image</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Created_at</th>
+                            <th>Updated_at</th>
                         </tr>
 
                         @foreach ($p as $product)
@@ -27,6 +28,7 @@
                         <tr>
                             <td>{{ $p->firstItem() + $loop->index }}</td>
                             <td>{{ $product->name }}</td>
+                            <td>{{ $product->cat->name}} </td>
                             <td><img src="{{ asset('backend/product/resize/'.$product->image) }}" alt=""></td>
                             <td>{{ $product->price }}</td>
                             <td>{{ $product->description }}</td>

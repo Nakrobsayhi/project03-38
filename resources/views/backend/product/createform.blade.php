@@ -15,7 +15,8 @@
                                         aria-hidden="true"></i>Product Name</a></li>
                         </ul>
                         <div id="myTabContent" class="tab-content custom-product-edit">
-                            <form action="{{ url('admin/product/insert') }}" method="POST" enctype="multipart/form-data"> 
+                            <form action="{{ url('admin/product/insert') }}" method="POST"
+                                enctype="multipart/form-data">
                                 @csrf
                                 <div class="product-tab-list tab-pane fade active in" id="description">
                                     <div class="row">
@@ -59,9 +60,12 @@
                                                         id="exampleFormControlSelect1"
                                                         aria-label="Default select example">
                                                         <option selected>Choose Category</option>
-                                                        <option value="1">โทรศัพท์มือถือ</option>
-                                                        <option value="2">โน๊ตบุ๊ค</option>
-                                                        <option value="3">คอมพิวเตอร์ตั้งโต๊ะ</option>
+
+                                                        @foreach ($category as $cat)
+                                                        <option value="{{ $cat->category_id }}">{{ $cat->name }}
+                                                        </option>
+                                                        @endforeach
+
                                                     </select>
                                                 </div>
                                                 <div class="input-group mg-b-pro-edt">
