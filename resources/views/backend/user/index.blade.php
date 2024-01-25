@@ -10,26 +10,23 @@
                     <h4>User</h4>
                     <table>
                         <tr>
-                            <th>NO</th>
+                            <th>id</th>
                             <th>Name</th>
-                            <th>Address</th>
                             <th>Email</th>
                             <th>Phone</th>
-                            <th>Status</th>
-                            <th>Setting</th>
                         </tr>
-                        <tr>
-                            <td><img src="img/new-product/5-small.jpg" alt="" /></td>
-                            <td>Product Title 1</td>
-                            <td>a</td>
-                            <td>50</td>
-                            <td>$750</td>
-                            <td>Out Of Stock</td>
-                            <td>
-                                <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                            </td>
+                        
+                        @foreach ($u as $user)
+
+                        <tr>    
+                            <td>{{ $user->id }}</td>
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->phone }}</td>
                         </tr>
+
+                        @endforeach
+
                     </table>
                     <div class="custom-pagination">
                         <ul class="pagination">

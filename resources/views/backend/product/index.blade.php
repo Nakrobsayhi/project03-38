@@ -13,36 +13,40 @@
                     </div>
                     <table>
                         <tr>
-                            <th>Product</th>
-                            <th>Product Title</th>
-                            <th>Status</th>
-                            <th>Purchases</th>
-                            <th>Product sales</th>
-                            <th>Stock</th>
-                            <th>Price</th>
-                            <th>Setting</th>
+                            <th>product_id</th>
+                            <th>name</th>
+                            <th>image</th>
+                            <th>price</th>
+                            <th>description</th>
+                            <th>created_at</th>
+                            <th>updated_at</th>
                         </tr>
+
+                        @foreach ($p as $product)
+
                         <tr>
-                            <td><img src="img/new-product/5-small.jpg" alt="" /></td>
-                            <td>Product Title 1</td>
+                            <td>{{ $p->firstItem() + $loop->index }}</td>
+                            <td>{{ $product->name }}</td>
+                            <td><img src="{{ asset('backend/product/resize/'.$product->image) }}" alt=""></td>
+                            <td>{{ $product->price }}</td>
+                            <td>{{ $product->description }}</td>
+                            <td>{{ $product->created_at }}</td>
+                            <td>{{ $product->updated_at }}</td>
+
                             <td>
-                                <button class="pd-setting">Active</button>
-                            </td>
-                            <td>50</td>
-                            <td>$750</td>
-                            <td>Out Of Stock</td>
-                            <td>$15</td>
-                            <td>
-                                <a href="{{ route('edit.pro') }}"><button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a>
-                                <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                <a href="{{ url('admin/product/edit/'.$product->product_id) }}"><button
+                                        data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i
+                                            class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a>
+                                <a href="{{ url('admin/product/delete/'.$product->product_id) }}"><button
+                                        data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i
+                                            class="fa fa-trash-o" aria-hidden="true"></i></button></a>
                             </td>
                         </tr>
+
+                        @endforeach
+
                     </table>
                     <div class="custom-pagination">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>

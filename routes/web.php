@@ -38,9 +38,14 @@ Route::get('admin/user/index',[UserController::class,  'index']);
 
 Route::get('admin/category/index',[CategoryController::class,  'index']);
 Route::get('admin/category/createform',[CategoryController::class,  'createform'])->name('make.cat');
-Route::get('admin/category/edit',[CategoryController::class,  'edit'])->name('edit.cat');
+Route::get('admin/category/edit/{id}',[CategoryController::class,  'edit']);
+route::post('admin/category/insert',[CategoryController::class, 'insert']);
+route::post('admin/category/update/{id}',[CategoryController::class, 'update']);
+route::get('admin/category/delete/{id}',[CategoryController::class, 'delete']);
 
 Route::get('admin/product/index',[ProductController::class,  'index']);
 Route::get('admin/product/createform',[ProductController::class,  'createform'])->name('make.pro');
-Route::get('admin/product/edit',[ProductController::class,  'edit'])->name('edit.pro');
-
+Route::get('admin/product/edit/{id}',[ProductController::class,  'edit'])->name('edit.pro');
+Route::post('admin/product/insert',[ProductController::class, 'insert']);
+route::post('admin/product/update/{id}',[ProductController::class, 'update']);
+route::get('admin/product/delete/{id}',[ProductController::class, 'delete']);
