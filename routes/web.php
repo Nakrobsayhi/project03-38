@@ -29,7 +29,7 @@ Route::get('/dashboard', function () {
     $u = User::all();
     $c = Category::all();
     $p = Product::all();
-    return view('dashboard');
+    return view('dashboard',compact('u','c','p'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

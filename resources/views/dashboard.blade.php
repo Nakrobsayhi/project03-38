@@ -35,7 +35,7 @@
                                 <div class="col-xs-3 mar-bot-15 text-left">
                                 </div>
                                     <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">2 คน</h2>
+                                        <h2 class="text-right no-margin">{{ $u->count() }} คน</h2>
                                     </div>
                                 </div>
                                 <div class="progress progress-mini">
@@ -50,7 +50,7 @@
                                 <div class="col-xs-3 mar-bot-15 text-left">
                                 </div>
                                     <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">5 ประเภท</h2>
+                                        <h2 class="text-right no-margin">{{ $c->count() }} ประเภท</h2>
                                     </div>
                                 </div>
                                 <div class="progress progress-mini">
@@ -65,7 +65,7 @@
                                 <div class="col-xs-3 mar-bot-15 text-left">
                                 </div>
                                     <div class="col-xs-9 cus-gh-hd-pro">
-                                        <h2 class="text-right no-margin">10 ชิ้น</h2>
+                                        <h2 class="text-right no-margin">{{ $p->count() }} ชิ้น</h2>
                                     </div>
                                 </div>
                                 <div class="progress progress-mini">
