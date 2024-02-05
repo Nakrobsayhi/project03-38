@@ -38,9 +38,6 @@
                                         <h2 class="text-right no-margin">{{ $u->count() }} คน</h2>
                                     </div>
                                 </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 78%;" class="progress-bar bg-green"></div>
-                                </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
@@ -53,9 +50,6 @@
                                         <h2 class="text-right no-margin">{{ $c->count() }} ประเภท</h2>
                                     </div>
                                 </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 38%;" class="progress-bar bg-red"></div>
-                                </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
@@ -67,9 +61,6 @@
                                     <div class="col-xs-9 cus-gh-hd-pro">
                                         <h2 class="text-right no-margin">{{ $p->count() }} ชิ้น</h2>
                                     </div>
-                                </div>
-                                <div class="progress progress-mini">
-                                    <div style="width: 50%;" class="progress-bar bg-purple"></div>
                                 </div>
                             </div>
                         </div>

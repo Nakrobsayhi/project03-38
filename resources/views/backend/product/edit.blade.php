@@ -20,7 +20,7 @@
                                 @csrf
                                 <div class="product-tab-list tab-pane fade active in" id="description">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                             <div class="review-content-section">
                                                 <div class="input-group mg-b-pro-edt">
                                                     <span class="input-group-addon"><i class="icon nalika-user"
@@ -40,18 +40,19 @@
                                                     <input type="text" name="description" class="form-control"
                                                         placeholder="Description" value="{{ $pro->description }}">
                                                 </div>
-                                                <div class="input-group mg-b-pro-edt">
-                                                    <select name="category_id" class="form-select"
-                                                        id="exampleFormControlSelect1"
-                                                        aria-label="Default select example">
 
+
+                                                <div class="form-group">
+                                                    <select name="category_id" class="form-control"
+                                                        id="exampleFormControlSelect1">
                                                         @foreach ($cat as $c)
                                                         <option value="{{ $c->category_id }}" @if ($c->category_id == $pro->category_id)
                                                             selected @endif>{{ $c->name }}</option>
                                                         @endforeach
-
                                                     </select>
                                                 </div>
+
+
                                                 <div class="input-group mg-b-pro-edt">
                                                     <span class="input-group-addon"><i class="icon nalika-user"
                                                             aria-hidden="true"></i></span>
@@ -69,8 +70,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <br><br>
                                     <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 ">
                                             <div class="text-center custom-pro-edt-ds">
                                                 <input type="submit" value="Update"
                                                     class="btn btn-ctl-bt waves-effect waves-light m-r-10">

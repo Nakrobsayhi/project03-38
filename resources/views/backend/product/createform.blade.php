@@ -20,11 +20,10 @@
                                 @csrf
                                 <div class="product-tab-list tab-pane fade active in" id="description">
                                     <div class="row">
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                             <div class="review-content-section">
                                                 <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"><i class="icon nalika-user"
-                                                            aria-hidden="true"></i></span>
+                                                    <span class="input-group-addon"></span>
                                                     <input type="text" name="name" class="form-control"
                                                         placeholder="Name">
                                                 </div>
@@ -34,8 +33,7 @@
                                                     @enderror
                                                 </div>
                                                 <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"><i class="icon nalika-user"
-                                                            aria-hidden="true"></i></span>
+                                                    <span class="input-group-addon"></span>
                                                     <input type="text" name="price" class="form-control"
                                                         placeholder="Price">
                                                 </div>
@@ -45,8 +43,7 @@
                                                     @enderror
                                                 </div>
                                                 <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"><i class="icon nalika-user"
-                                                            aria-hidden="true"></i></span>
+                                                    <span class="input-group-addon"></span>
                                                     <input type="text" name="description" class="form-control"
                                                         placeholder="Description">
                                                 </div>
@@ -55,22 +52,21 @@
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                     @enderror
                                                 </div>
-                                                <div class="input-group mg-b-pro-edt">
-                                                    <select name="category_id" class="form-select"
-                                                        id="exampleFormControlSelect1"
-                                                        aria-label="Default select example">
+
+                                                <div class="form-group">
+                                                    <select name="category_id" class="form-control"
+                                                        id="exampleFormControlSelect1">
                                                         <option selected>Choose Category</option>
 
                                                         @foreach ($category as $cat)
                                                         <option value="{{ $cat->category_id }}">{{ $cat->name }}
                                                         </option>
                                                         @endforeach
-
                                                     </select>
                                                 </div>
+
                                                 <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"><i class="icon nalika-user"
-                                                            aria-hidden="true"></i></span>
+                                                    <span class="input-group-addon"></span>
                                                     <input type="file" name="image" class="form-control">
                                                 </div>
                                                 <div class="mt-3">
@@ -82,7 +78,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
                                             <div class="text-center custom-pro-edt-ds">
                                                 <input type="submit" value="Save"
                                                     class="btn btn-ctl-bt waves-effect waves-light m-r-10">

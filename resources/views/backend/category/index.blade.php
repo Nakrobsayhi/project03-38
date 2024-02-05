@@ -17,6 +17,7 @@
                             <th>Name</th>
                             <th>Created At</th>
                             <th>Updated_At</th>
+                            <th>Action</th>
                         </tr>
 
                         @foreach ($c as $category)

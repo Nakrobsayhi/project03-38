@@ -19,7 +19,7 @@
                         @foreach ($u as $user)
 
                         <tr>
-                            <td>{{ $user->id }}</td>
+                            <td>{{ $u->firstItem() + $loop->index }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->phone }}</td>
@@ -28,12 +28,6 @@
                         @endforeach
 
                     </table>
-                    <div class="custom-pagination">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>

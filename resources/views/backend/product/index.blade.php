@@ -21,6 +21,7 @@
                             <th>Description</th>
                             <th>Created_at</th>
                             <th>Updated_at</th>
+                            <th>Action</th>
                         </tr>
 
                         @foreach ($p as $product)
@@ -48,7 +49,8 @@
                         @endforeach
 
                     </table>
-                    <div class="custom-pagination">
+                    <div class="mt-3">
+                        {{ $p->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
             </div>

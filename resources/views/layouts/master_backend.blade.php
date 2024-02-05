@@ -59,7 +59,7 @@
                         </li>
                         <li class="active">
                             <a href="{{ url('admin/user/index') }}">
-                                <i class="icon nalika-user"></i>
+                                <i class="icon nalika-user icon-wrap"></i>
                                 <span class="mini-click-non">User</span>
                             </a>
                         </li>
@@ -113,14 +113,6 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
-                                        <div class="header-top-menu tabl-d-n hd-search-rp">
-                                            <div class="breadcome-heading">
-                                                <form role="search" class="">
-                                                    <input type="text" placeholder="Search..." class="form-control" name="search" id="search">
-                                                    <a href=""><i class="fa fa-search"></i></a>
-                                                </form>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                         <div class="header-right-info">
