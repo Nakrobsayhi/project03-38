@@ -22,8 +22,7 @@
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="review-content-section">
                                                 <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"><i class="icon nalika-user"
-                                                            aria-hidden="true"></i></span>
+                                                    <span class="input-group-addon"></span>
                                                     <input type="text" value="{{ $cat->name }}" class="form-control"
                                                         placeholder="write here" name="name">
                                                 </div>
