@@ -43,7 +43,7 @@
             </div>
             <div class="nalika-profile">
                 <div class="profile-dtl">
-                    <a href="#"><img src="{{ asset('backend/img/notification/4.jpg')}}" alt="" /></a>
+                    <!-- <a href="#"><img src="{{ asset('backend/img/notification/4.jpg')}}" alt="" /></a> -->
                     <h2><span class="min-dtn">{{ Auth::user()->name }}</span></h2>
                     <h2><span class="min-dtn">{{ Auth::user()->email }}</span></h2>
                 </div>
