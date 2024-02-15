@@ -39,13 +39,15 @@ class ProductController extends Controller
                 'price' => 'required',
                 'description' => 'required',
                 'image' => 'mimes:jpg,jpeg,png',
+                'category_id' => 'required',
             ],
             [
-                'name.required' => 'Please enter a name first',
+                'name.required' => 'Please enter a name',
                 'name.max' => 'Max character is 255',
-                'price.required' => 'Please enter a price first',
-                'description.required' => 'Please enter a description',
+                'price.required' => 'Please enter a price',
+                'description.required' => 'Please enter a description',`
                 'image' => 'File type can only be jpg,jpeg,png',
+                'category_id.required' => 'Please enter a category',`
             ]
         );
 
@@ -63,7 +65,7 @@ class ProductController extends Controller
             $product->image = 'no_image.jpg';
         }
         $product->save();
-        alert()->success('Successfully Saved', '🏠✍️💖');
+        alert()->success('Successfully Saved', 'บันทึกสำเร็จ');
         return redirect('admin/product/index');
     }
 
@@ -86,7 +88,7 @@ class ProductController extends Controller
             $product->image = $filename;
         }
         $product->update();
-        alert()->success('Successfully Updated', '😱😱😱');
+        alert()->success('Successfully Updated', 'อัปเดทข้อมูลสำเร็จ');
         return redirect('admin/product/index');
     }
 
@@ -96,7 +98,7 @@ class ProductController extends Controller
         File::delete(public_path() . '/backend/product/' . $product->image);
         File::delete(public_path() . '/backend/product/resize/' . $product->image);
         $product->delete();
-        alert()->success('Successfully Delete', '🗑️🚮👻');
+        alert()->success('Successfully Deleted', 'ลบข้อมูลสำเร็จ');
         return redirect('admin/product/index');
     }
 }

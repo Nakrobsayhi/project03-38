@@ -30,7 +30,7 @@
     <script src="{{ asset('backend/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 </head>
 
-<body>9
+<body>
     <!-- Alert -->
     @include('sweetalert::alert')
 

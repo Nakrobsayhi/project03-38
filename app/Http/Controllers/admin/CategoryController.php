@@ -28,7 +28,7 @@ class CategoryController extends Controller
             'name' => 'required|unique:categories|max:255',
         ],
         [
-            'name.required' => 'Please enter a name first',
+            'name.required' => 'Please enter a name',
             'name.unique'=>'This name is already taken',
             'name.max'=>'Maximun is 255',
         ]);
@@ -37,7 +37,7 @@ class CategoryController extends Controller
         $category = new Category();
         $category->name = $request->name;
         $category->save();
-        alert()->success('Successfully Saved','😡🤬😡');
+        alert()->success('Successfully Saved','บันทึกสำเร็จ');
         return redirect('admin/category/index');
     }
 
@@ -45,14 +45,14 @@ class CategoryController extends Controller
         $category = Category::find($category_id);
         $category->name = $request->name;
         $category->update();
-        alert()->success('Successfully Updated','😱😱😱');
+        alert()->success('Successfully Updated','อัปเดทข้อมูลสำเร็จ');
         return redirect('admin/category/index');
     }
 
     public function delete($category_id){
         $category = Category::find($category_id);
         $category->delete();
-        alert()->success('Successfully Delete','🗑️🚮👻');
+        alert()->success('Successfully Deleted','ลบข้อมูลสำเร็จ🗑️');
         return redirect('admin/category/index');
     }
 }

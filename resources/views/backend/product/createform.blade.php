@@ -54,15 +54,20 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <select name="category_id" class="form-control"
+                                                    <select name="category_id" class="form-control mb-2"
                                                         id="exampleFormControlSelect1">
-                                                        <option selected>Choose Category</option>
+                                                        <option selected value="">Choose Category</option>
 
                                                         @foreach ($category as $cat)
                                                         <option value="{{ $cat->category_id }}">{{ $cat->name }}
                                                         </option>
                                                         @endforeach
                                                     </select>
+                                                    <div class="mt-3">
+                                                        @error('category_id')
+                                                        <div class="alert alert-danger mt-3">{{ $message }}</div>
+                                                        @enderror
+                                                    </div>
                                                 </div>
 
                                                 <div class="input-group mg-b-pro-edt">

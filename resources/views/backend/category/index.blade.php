@@ -16,7 +16,7 @@
                             <th>id</th>
                             <th>Name</th>
                             <th>Created At</th>
-                            <th>Updated_At</th>
+                            <th>Updated At</th>
                             <th>Action</th>
                         </tr>
 

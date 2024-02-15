@@ -19,8 +19,8 @@
                             <th>Image</th>
                             <th>Price</th>
                             <th>Description</th>
-                            <th>Created_at</th>
-                            <th>Updated_at</th>
+                            <th>Created Aลบข้อมูลสำเร็จt</th>
+                            <th>Updated At</th>
                             <th>Action</th>
                         </tr>
 
