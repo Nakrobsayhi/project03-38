@@ -22,30 +22,36 @@
                                     <div class="row">
                                         <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                             <div class="review-content-section">
-                                                <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"></span>
+                                                <div class="form-group">
                                                     <input type="text" name="name" class="form-control"
-                                                        placeholder="Name">
+                                                        placeholder="Enter a name">
                                                 </div>
                                                 <div class="mt-3">
                                                     @error('name')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                     @enderror
                                                 </div>
-                                                <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"></span>
+                                                <div class="form-group">
+                                                    <input type="text" name="amount" class="form-control"
+                                                        placeholder="Enter an amount">
+                                                </div>
+                                                <div class="mt-3">
+                                                    @error('amount')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                                <div class="form-group">
                                                     <input type="text" name="price" class="form-control"
-                                                        placeholder="Price">
+                                                        placeholder="Enter a price">
                                                 </div>
                                                 <div class="mt-3">
                                                     @error('price')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                     @enderror
                                                 </div>
-                                                <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"></span>
+                                                <div class="form-group">
                                                     <input type="text" name="description" class="form-control"
-                                                        placeholder="Description">
+                                                        placeholder="Enter a description">
                                                 </div>
                                                 <div class="mt-3">
                                                     @error('description')
@@ -70,8 +76,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"></span>
+                                                <div class="form-group">
                                                     <input type="file" name="image" class="form-control">
                                                 </div>
                                                 <div class="mt-3">

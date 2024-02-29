@@ -7,7 +7,10 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="product-status-wrap">
-                    <h4>User</h4>
+                    <ul id="myTab3" class="tab-review-design">
+                        <li class="active"><a href="#"><i class="icon nalika-user icon-wrap"
+                                    aria-hidden="true"></i>Product</a></li>
+                    </ul>
                     <table>
                         <tr>
                             <th>id</th>

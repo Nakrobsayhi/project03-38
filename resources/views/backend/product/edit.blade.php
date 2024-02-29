@@ -22,23 +22,41 @@
                                     <div class="row">
                                         <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                             <div class="review-content-section">
-                                                <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"><i class="icon nalika-user"
-                                                            aria-hidden="true"></i></span>
+                                                <div class="form-group">
                                                     <input type="text" name="name" class="form-control"
-                                                        placeholder="Name" value="{{ $pro->name }}">
+                                                        placeholder="Enter a name" value="{{ $pro->name }}">
                                                 </div>
-                                                <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"><i class="icon nalika-user"
-                                                            aria-hidden="true"></i></span>
+                                                <div class="mt-3">
+                                                    @error('name')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" name="amount" class="form-control"
+                                                        placeholder="Enter an amount" value="{{ $pro->amount }}">
+                                                </div>
+                                                <div class="mt-3">
+                                                    @error('amount')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                                <div class="form-group">
                                                     <input type="text" name="price" class="form-control"
-                                                        placeholder="Price" value="{{ $pro->price }}">
+                                                        placeholder="Enter a price" value="{{ $pro->price }}">
                                                 </div>
-                                                <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"><i class="icon nalika-user"
-                                                            aria-hidden="true"></i></span>
+                                                <div class="mt-3">
+                                                    @error('price')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                                <div class="form-group">
                                                     <input type="text" name="description" class="form-control"
-                                                        placeholder="Description" value="{{ $pro->description }}">
+                                                        placeholder="Enter a description" value="{{ $pro->description }}">
+                                                </div>
+                                                <div class="mt-3">
+                                                    @error('description')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
 
 
@@ -53,9 +71,7 @@
                                                 </div>
 
 
-                                                <div class="input-group mg-b-pro-edt">
-                                                    <span class="input-group-addon"><i class="icon nalika-user"
-                                                            aria-hidden="true"></i></span>
+                                                <div class="form-group">
                                                     <input type="file" name="image" class="form-control">
                                                 </div>
                                                 <div class="mt-4">

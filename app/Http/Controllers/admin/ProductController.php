@@ -7,7 +7,7 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use File;
-use Image;
+use Image;  
 use Illuminate\Support\Str;
 
 class ProductController extends Controller
@@ -36,6 +36,7 @@ class ProductController extends Controller
         $validated = $request->validate(
             [
                 'name' => 'required|max:255',
+                'amount' => 'required|numeric',
                 'price' => 'required',
                 'description' => 'required',
                 'image' => 'mimes:jpg,jpeg,png',
@@ -44,6 +45,8 @@ class ProductController extends Controller
             [
                 'name.required' => 'Please enter a name',
                 'name.max' => 'Max character is 255',
+                'amount.required' => 'Please enter a amount',
+                'amount.numeric' => 'Can only be number',
                 'price.required' => 'Please enter a price',
                 'description.required' => 'Please enter a description',`
                 'image' => 'File type can only be jpg,jpeg,png',
@@ -53,6 +56,7 @@ class ProductController extends Controller
 
         $product = new Product();
         $product->name = $request->name;
+        $product->amount = $request->amount;
         $product->price = $request->price;
         $product->description = $request->description;
         $product->category_id = $request->category_id;
@@ -71,8 +75,29 @@ class ProductController extends Controller
 
     public function update(Request $request, $product_id)
     {
+        $validated = $request->validate(
+            [
+                'name' => 'required|max:255',
+                'amount' => 'required|numeric',
+                'price' => 'required',
+                'description' => 'required',
+                'image' => 'mimes:jpg,jpeg,png',
+                'category_id' => 'required',
+            ],
+            [
+                'name.required' => 'Please enter a name',
+                'name.max' => 'Max character is 255',
+                'amount.required' => 'Please enter a amount',
+                'amount.numeric' => 'Can only be number',
+                'price.required' => 'Please enter a price',
+                'description.required' => 'Please enter a description',`
+                'image' => 'File type can only be jpg,jpeg,png',
+                'category_id.required' => 'Please enter a category',`
+            ]
+        );
         $product = Product::find($product_id);
         $product->name = $request->name;
+        $product->amount = $request->amount;
         $product->price = $request->price;
         $product->description = $request->description;
         $product->category_id = $request->category_id;

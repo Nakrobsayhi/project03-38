@@ -10,13 +10,17 @@
                     <div class="add-product">
                         <a href="{{ route('make.cat') }}">Add Category</a>
                     </div>
-                    <h4>Category</h4>
+                    <ul id="myTab3" class="tab-review-design">
+                        <li class="active"><a href="#"><i class="icon nalika-pie-chart icon-wrap"
+                                    aria-hidden="true"></i>Category</a></li>
+                    </ul>
                     <table>
                         <tr>
                             <th>id</th>
                             <th>Name</th>
-                            <th>Created At</th>
-                            <th>Updated At</th>
+                            <th>Amount</th>
+                            <th>Created at</th>
+                            <th>Updated at</th>
                             <th>Action</th>
                         </tr>
 
@@ -25,6 +29,7 @@
                         <tr>
                             <td>{{ $c->firstItem() + $loop->index }}</td>
                             <td>{{ $category->name }}</td>
+                            <td>{{ $category->pro->count() }}</td>
                             <td>{{ $category->created_at }}</td>
                             <td>{{ $category->updated_at }}</td>
                             <td>

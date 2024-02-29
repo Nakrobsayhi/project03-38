@@ -51,8 +51,12 @@ class CategoryController extends Controller
 
     public function delete($category_id){
         $category = Category::find($category_id);
+        if($category->pro->count()>0){
+        alert()->error('Delete Unsuccessful','เนื่องจากมีสินค้าอยู่ในประเภทนี้');
+        return redirect()->back();
+        }
         $category->delete();
-        alert()->success('Successfully Deleted','ลบข้อมูลสำเร็จ🗑️');
+        alert()->success('Successfully Deleted','ลบข้อมูลสำเร็จ');
         return redirect('admin/category/index');
     }
 }
